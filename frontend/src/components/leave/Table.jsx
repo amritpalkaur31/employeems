@@ -10,7 +10,7 @@ const Table = () => {
   // Fetch leave data from API
     const fetchLeaves = async () => {
       try {
-        const response = await axios.get('https://ems-backend-w2zv.onrender.com/api/leave', {
+        const response = await axios.get('https://employeems-backend-x0a7.onrender.com/api/leave', {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`,
           },

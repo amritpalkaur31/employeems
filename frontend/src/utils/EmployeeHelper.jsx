@@ -18,23 +18,23 @@ export const columns = [
     name: "Name",
     selector: (row) => row.name,
     sortable: true,
-      width: "150px"
+    width: "150px"
   },
   {
     name: "Image",
     selector: (row) => row.profileImage,
-      width: "100px"
+    width: "100px"
   },
   {
     name: "Department",
     selector: (row) => row.dep_name,
-      width: "150px"
+    width: "150px"
   },
   {
     name: "DOB",
     selector: (row) => row.dob,
     sortable: true,
-      width: "120px"
+    width: "120px"
   },
   {
     name: "Action",
@@ -47,7 +47,7 @@ export const columns = [
 export const fetchDepartments = async () => {
   let departments;
   try {
-    const response = await axios.get("https://ems-backend-w2zv.onrender.com/api/department", {
+    const response = await axios.get("https://employeems-backend-x0a7.onrender.com/api/department", {
       headers: {
         Authorization: `Bearer ${localStorage.getItem('token')}`,
       },
@@ -64,13 +64,13 @@ export const fetchDepartments = async () => {
   return departments;
 };
 
-//employees for salary form
+// employees for salary form
 
 export const getemployees = async (id) => {
   let employees;
   try {
     const response = await axios.get(
-      `http://localhost:8000/api/employee/department/${id}`, {
+      `https://employeems-backend-x0a7.onrender.com/api/employee/department/${id}`, {
       headers: {
         Authorization: `Bearer ${localStorage.getItem('token')}`,
       },
@@ -89,10 +89,10 @@ export const getemployees = async (id) => {
 
 // ACTION BUTTONS COMPONENT
 export const EmployeeButtons = ({ Id }) => {
-    const navigate = useNavigate();
-  
-    return (
-      <div className="flex flex-wrap gap-2 justify-center sm:justify-start">
+  const navigate = useNavigate();
+
+  return (
+    <div className="flex flex-wrap gap-2 justify-center sm:justify-start">
       <button
         className="flex items-center gap-1 px-3 py-1 bg-blue-600 text-white rounded text-sm hover:bg-teal-700 whitespace-nowrap"
         onClick={() => navigate(`/admin-dashboard/employees/${Id}`)}
@@ -122,6 +122,5 @@ export const EmployeeButtons = ({ Id }) => {
         Leave
       </button>
     </div>
-    
   );
 };

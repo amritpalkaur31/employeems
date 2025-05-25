@@ -15,10 +15,13 @@ const Login = () => {
     e.preventDefault();
     setError(null);
     try {
-      const response = await axios.post("https://ems-backend-iota.vercel.app/api/auth/login", {
-        email,
-        password,
-      });
+      const response = await axios.post(
+        "https://employeems-backend-x0a7.onrender.com/api/auth/login",
+        {
+          email,
+          password,
+        }
+      );
 
       if (response.data.success && response.data.token) {
         login(response.data.user);
@@ -41,9 +44,12 @@ const Login = () => {
 
   const handleGoogleLoginSuccess = async (credentialResponse) => {
     try {
-      const res = await axios.post("https://ems-backend-w2zv.onrender.com/api/auth/google-login", {
-        token: credentialResponse.credential,
-      });
+      const res = await axios.post(
+        "https://employeems-backend-x0a7.onrender.com/api/auth/google-login",
+        {
+          token: credentialResponse.credential,
+        }
+      );
 
       if (res.data.success && res.data.token) {
         login(res.data.user);

@@ -29,14 +29,14 @@ export const columns = [
     name: "Action",
     selector: (row) => row.action,
     center: true,
-    },
+  },
 ];
 
 export const AttendanceHelper = ({ status, employeeId, statusChange }) => {
   const markEmployee = async (newStatus, employeeId) => {
     try {
       const response = await axios.put(
-        `https://ems-backend-w2zv.onrender.com/api/attendance/update/${employeeId}`,
+        `https://employeems-backend-x0a7.onrender.com/api/attendance/update/${employeeId}`,
         { status: newStatus },
         {
           headers: {

@@ -17,7 +17,7 @@ const AddDepartment = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('https://ems-backend-w2zv.onrender.com/api/department/add', department, {
+      const response = await axios.post('https://employeems-backend-x0a7.onrender.com/api/department/add', department, {
         headers: {
           "Authorization": `Bearer ${localStorage.getItem('token')}`
         }

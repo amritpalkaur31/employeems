@@ -12,7 +12,7 @@ const LeaveList = () => {
   const fetchLeaves = async () => {
     try {
       const response = await axios.get(
-        `https://ems-backend-w2zv.onrender.com/api/leave/${id}/${user.role}`,
+        `https://employeems-backend-x0a7.onrender.com/api/leave/${id}/${user.role}`,
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,

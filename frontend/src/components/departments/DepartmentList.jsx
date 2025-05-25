@@ -16,7 +16,7 @@ const DepartmentList = () => {
     const fetchDepartments = async () => {
       setDepLoading(true)
       try {
-        const response = await axios.get("https://ems-backend-w2zv.onrender.com/api/department", {
+        const response = await axios.get("https://employeems-backend-x0a7.onrender.com/api/department", {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`,
           },

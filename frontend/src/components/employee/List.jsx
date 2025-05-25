@@ -13,7 +13,7 @@ const List = () => {
     const fetchEmployees = async () => {
       setEmpLoading(true);
       try {
-        const response = await axios.get("https://ems-backend-w2zv.onrender.com/api/employee", {
+        const response = await axios.get("https://employeems-backend-x0a7.onrender.com/api/employee", {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`,
           },
@@ -29,7 +29,7 @@ const List = () => {
             dob: new Date(emp.dob).toLocaleDateString(),
             profileImage: (
               <img
-                src={`https://ems-backend-w2zv.onrender.com/${emp.userId?.profileImage}`}
+                src={`https://employeems-backend-x0a7.onrender.com/${emp.userId?.profileImage}`}
                 alt="profile"
                 className="w-10 h-10 rounded-full object-cover"
               />
